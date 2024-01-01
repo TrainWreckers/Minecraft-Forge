@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+    forge:
+        container_name: TrainWreck-Forge
+        image: trainwreck-forge
+        # -it to allow attaching to active container, and using the active minecraft terminal
+        stdin_open: true # the equivalent to -i
+        tty: true # the equivalent to -t 
+        volumes:
+            - ./data/mods:/data/mods
+            - ./data/world:/data/world
+            - ./data/config:/data/config
+        ports:
+            - "25565:25565"
