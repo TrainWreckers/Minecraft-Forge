@@ -3,7 +3,7 @@ version: "3.8"
 services:
     forge:
         container_name: TrainWreck-Forge
-        image: trainwreck-forge
+        image: ghcr.io/trainwreckers/minecraft-forge:latest
         # -it to allow attaching to active container, and using the active minecraft terminal
         stdin_open: true # the equivalent to -i
         tty: true # the equivalent to -t 
